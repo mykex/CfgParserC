@@ -149,7 +149,7 @@ int ConfigGetParam(int type, const char *name, void *value)
     while(!feof(ConfigFile))
     {
          memset(buffer, 0, 256);
-         for(i=0; ((i<256) && (!feof(ConfigFile))); i++)
+         for(i=0; ((i<255) && (!feof(ConfigFile))); i++)
          {
               c = getc(ConfigFile);
               if(c == '#') // Ignore comments
